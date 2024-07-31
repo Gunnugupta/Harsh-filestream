@@ -20,11 +20,11 @@ class Telegram:
     START_PIC = env.get('START_PIC', "https://graph.org/file/0f4314c9f903a3c996ca9.jpg")
     VERIFY_PIC = env.get('VERIFY_PIC', "https://graph.org/file/87135b99d32804ad0d6a1.jpg")
     MULTI_CLIENT = False
-    FLOG_CHANNEL = int(env.get('FLOG_CHANNEL', '-1002166379672'))   # Logs channel for file logs
-    ULOG_CHANNEL = int(env.get('ULOG_CHANNEL', '-1002166379672'))   # Logs channel for user logs
+    FLOG_CHANNEL = int(env.get('FLOG_CHANNEL', '-1002241609467'))   # Logs channel for file logs
+    ULOG_CHANNEL = int(env.get('ULOG_CHANNEL', '-1002241609467'))   # Logs channel for user logs
     MODE = env.get("MODE", "primary")
     SECONDARY = True if MODE.lower() == "secondary" else False
-    AUTH_USERS = list(set(int(x) for x in str(env.get("AUTH_USERS", "6359874284")).split()))
+    AUTH_USERS = list(set(int(x) for x in str(env.get("AUTH_USERS", "")).split()))
 
 class Server:
     PORT = int(env.get("PORT", 8080))
